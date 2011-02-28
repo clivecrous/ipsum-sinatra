@@ -1,8 +1,25 @@
 <html>
   <head>
     <title>Ipsum Demo</title>
+    <script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+  </script>
+  <style>
+    #flattr{float:right}
+  </style>
   </head>
   <body>
+    <div id="flattr">
+      <a class="FlattrButton" style="display:none;" href="http://www.darkarts.co.za/ipsum"></a>
+    </div>
     <h1>Ipsum Demo</h1>
     <p>This site demonstrates the <a href="http://www.darkarts.co.za/ipsum">Ipsum</a> Ruby gem</p>
 <%= yield %>
