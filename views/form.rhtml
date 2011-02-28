@@ -1,0 +1,23 @@
+<form method="POST" action="/">
+  <label for="language">Language</label>
+  <select id="language" name="language">
+  <% LANGUAGES.each do |language| %>
+    <option value="<%= language %>"
+    <% if language.to_sym == @language %>
+      selected="selected"
+    <% end %>
+    ><%= language.capitalize %></option>
+  <% end %>
+  </select>
+  <label for="sentences">Sentences per paragraph</label>
+  <select id="sentences" name="sentences">
+  <% 10.times do |enum| %>
+    <option value="<%= enum + 1 %>"
+    <% if enum + 1 == @sentences %>
+      selected="selected"
+    <% end %>
+    ><%= enum + 1 %></option>
+  <% end %>
+  </select>
+  <input type="submit" value="view"/>
+</form>
